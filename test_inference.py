@@ -31,7 +31,7 @@ for i in range(5):
     t1 = time.time()
     # for pycoral
     # common.set_input(interpreter, img)
-    interpreter.set_tensor(interpreter['index'], img)
+    interpreter.set_tensor(interpreter_input['index'], img)
     interpreter.invoke()
 
     t2 = time.time()
