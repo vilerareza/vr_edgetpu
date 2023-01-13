@@ -13,10 +13,11 @@ interpreter.allocate_tensors()
 size = common.input_size(interpreter)
 img = Image.open(img_file).convert('RGB').resize(size, 1)
 
-print (size)
-t1 = time.time()
-common.set_input(interpreter, img)
-interpreter.invoke()
+for i in range(5):
+    print (size)
+    t1 = time.time()
+    common.set_input(interpreter, img)
+    interpreter.invoke()
 
-t2 = time.time()
-print ((t2-t1))
+    t2 = time.time()
+    print ((t2-t1))
